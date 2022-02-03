@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dashboard</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-reboot.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div class="row">
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="height:900px;border:1px solid grey;background-color:grey">
+                <div class="list-group">
+                    <a href="../Categories" class="list-group-item">Kategorie</a>
+                    <a href="../Questions" class="list-group-item">Pytania</a>
+                    <div class="list-group-item">
+                        @Html.ActionLink("Wyloguj się", "Logout", "Home")
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height:900px;border:1px solid grey">
+                @RenderBody()
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+</html>
